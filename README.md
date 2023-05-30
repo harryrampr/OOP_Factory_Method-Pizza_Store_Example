@@ -1,6 +1,6 @@
 ## Factory Method Example (OOP)
 
-We are sharing some simple PHP code showing the use of the [Factory Method](https://en.wikipedia.org/wiki/Factory_method_pattern) to define the steps to prepare specific pizzas at a pizza store. We show how modern versions of PHP, supporting Interfaces and Enumerators, make it easy to implement the Factory Method using PHP.
+We are sharing some simple PHP code showing the use of the [Factory Method](https://en.wikipedia.org/wiki/Factory_method_pattern) to define the steps to prepare specific pizzas at a pizza store. You will see how modern versions of PHP, supporting Interfaces and Enumerators, make it easy to implement the Factory Method using PHP.
 ### About the Factory Method
 The Factory Method is a creational design pattern in object-oriented programming (OOP) that provides an interface for creating objects, but allows subclasses to decide which class to instantiate. It is also known as the Virtual Constructor.
 
