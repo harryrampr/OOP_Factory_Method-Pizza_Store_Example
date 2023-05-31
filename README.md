@@ -9,16 +9,16 @@ The concept of the Factory Method pattern can be traced back to the 1980s, when 
 
 The Factory Method pattern was first formally described in the book ["Design Patterns: Elements of Reusable Object-Oriented Software"](https://en.wikipedia.org/wiki/Design_Patterns) published in 1994 by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides (also known as the "Gang of Four" or GoF). This book introduced the concept of design patterns, including the Factory Method pattern, and provided a comprehensive catalog of design patterns that continue to be widely referenced and used today.
 
-### Intent: 
+### Intent 
 The Factory Method pattern is used to create objects without specifying the exact class of the object that will be created. It allows for flexibility and decoupling by delegating the responsibility of object creation to subclasses.
 
-### Structure: 
+### Structure
 The main components of the Factory Method pattern are the abstract creator, concrete creators, abstract product, and concrete products. The abstract creator defines the factory method that subclasses implement to create objects. The concrete creators inherit from the abstract creator and provide the implementation for the factory method. The abstract product defines the interface of the products that can be created, and the concrete products implement the abstract product.
 
-### How it Works:
+### How it Works
 Clients of the Factory Method pattern call the factory method declared in the abstract creator. This method is responsible for creating the concrete product, but it lets the subclass decide which specific product class to instantiate. This allows for creating different product variations by extending the abstract creator and providing the appropriate implementation of the factory method in each subclass.
 
-### Benefits:
+### Benefits
 - Provides a way to encapsulate object creation and decouple it from the client code.
 - Allows for the introduction of new product variants without modifying existing client code.
 - Promotes the [Open-Closed Principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle), as new product types can be added by creating new subclasses without modifying existing code.
@@ -36,7 +36,7 @@ Clients of the Factory Method pattern call the factory method declared in the ab
 
 - **Object-Creation Variations:** The Factory Method pattern allows for creating different variations of objects without modifying the existing codebase. It enables the introduction of new product types or variations by extending the factory and providing the appropriate implementation of the factory method. This is useful in scenarios where different object configurations or behaviors are required based on specific conditions or user preferences.
 
-### Other Examples:
+### Other Examples
 A common example is a framework that provides an abstract class for creating database connections. The framework defines an abstract creator with a factory method called createConnection(). Subclasses of the abstract creator (e.g., [MySQLConnectionCreator](https://docs.oracle.com/middleware/1213/jdev/api-reference-esdk/oracle/jdeveloper/db/adapter/MySQLConnectionCreator.html), OracleConnectionCreator) implement the createConnection() method to return the appropriate concrete product (e.g., MySQLConnection, OracleConnection).
 
 Overall, the Factory Method pattern enables flexibility in object creation by providing a consistent interface for clients while deferring the decision of which specific class to instantiate to subclasses.

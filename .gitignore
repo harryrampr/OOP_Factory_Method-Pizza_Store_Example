@@ -4,3 +4,5 @@ composer.lock
 /vendor/
 /.phpunit.result.cache
 /coverage-report/
+/package-lock.json
+/node_modules/
