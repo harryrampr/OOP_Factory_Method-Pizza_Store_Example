@@ -7,7 +7,7 @@ The Factory Method is a creational design pattern in object-oriented programming
 ### History
 The concept of the Factory Method pattern can be traced back to the 1980s, when object-oriented programming was gaining prominence. During this time, software developers recognized the need for a flexible and reusable approach to object creation. The Factory Method pattern emerged as a solution to this problem.
 
-The Factory Method pattern was first formally described in the book ["Design Patterns: Elements of Reusable Object-Oriented Software"](https://en.wikipedia.org/wiki/Design_Patterns) published in 1994 by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides (also known as the "Gang of Four" or GoF). This book introduced the concept of design patterns, including the Factory Method pattern, and provided a comprehensive catalog of design patterns that continue to be widely referenced and used today.
+The Factory Method pattern was first formally described in the book ["Design Patterns: Elements of Reusable Object-Oriented Software"](https://en.wikipedia.org/wiki/Design_Patterns), published in 1994 by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides (also known as the "Gang of Four" or GoF). This book introduced the concept of design patterns, including the Factory Method pattern, and provided a comprehensive catalog of design patterns that continue to be widely referenced and used today.
 
 ### Intent 
 The Factory Method pattern is used to create objects without specifying the exact class of the object that will be created. It allows for flexibility and decoupling by delegating the responsibility of object creation to subclasses.
