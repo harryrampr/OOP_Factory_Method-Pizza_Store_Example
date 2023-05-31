@@ -9,7 +9,7 @@ abstract class Cheese
 
     public function __construct()
     {
-        echo sprintf('<li class="mt-2 mb-3">Add the %s</li>%s', $this->description, PHP_EOL);
+        echo sprintf('<li>Add the %s</li>%s', $this->description, PHP_EOL);
 
     }
 }

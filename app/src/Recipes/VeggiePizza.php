@@ -17,7 +17,7 @@ class VeggiePizza extends Pizza
 
     public function prepare(): void
     {
-        echo sprintf('<h2 class="text-xl font-medium">Preparing %s %s</h2>%s',
+        echo sprintf('<h1>Preparing %s %s</h1>%s',
             $this->size->toString(), $this->name, PHP_EOL);
         $this->dough = $this->ingredientFactory->createDough();
         $this->sauce = $this->ingredientFactory->createSauce();

@@ -35,19 +35,19 @@ abstract class Pizza
 
     public function bake(): void
     {
-        echo '</ul>'. PHP_EOL.'<h3 class="mt-2 mb-3 text-red-600">Bake for 25 minutes at 350</h3>', PHP_EOL;
+        echo '</ul>'. PHP_EOL.'<h2  class="text-red-600">Bake for 25 minutes at 350</h2 >', PHP_EOL;
     }
 
     public function cut(): void
     {
-        echo sprintf('<h3 class="mt-2 mb-3">Cutting the pizza into %s %s slices</h3>%s',
+        echo sprintf('<h2 >Cut the pizza into %s %s slices</h2 >%s',
             $this->sliceCount,
             $this->sliceType->toString(), PHP_EOL);
     }
 
     public function box(): void
     {
-        echo sprintf('<h3 class="mt-2 mb-3">Place pizza in %s box</h3>%s',
+        echo sprintf('<h2 >Place pizza in %s box</h2 >%s',
             $this->boxType, PHP_EOL);
     }
 
