@@ -35,7 +35,7 @@ abstract class Pizza
 
     public function bake(): void
     {
-        echo '</ul>'. PHP_EOL.'<h2  class="text-red-600">Bake for 25 minutes at 350</h2 >', PHP_EOL;
+        echo '</ul>' . PHP_EOL . '<h2  class="text-red-600">Bake for 25 minutes at 350</h2 >', PHP_EOL;
     }
 
     public function cut(): void
