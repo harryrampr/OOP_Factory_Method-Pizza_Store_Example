@@ -6,7 +6,7 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>OPP Factory Method - Pizza Store Example</title>
+    <title>OPP Factory Method Pattern - Pizza Store Example</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./css/main.css" rel="stylesheet">
 </head>
