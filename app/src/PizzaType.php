@@ -8,6 +8,9 @@ use App\Recipes\ClamPizza;
 use App\Recipes\PepperoniPizza;
 use App\Recipes\VeggiePizza;
 
+/**
+ * Enumeration representing the different types of pizzas.
+ */
 enum PizzaType: int
 {
     case CHEESE = 0;
@@ -15,6 +18,11 @@ enum PizzaType: int
     case PEPPERONI = 2;
     case VEGGIE = 3;
 
+    /**
+     * Get the recipe class name for the pizza type.
+     *
+     * @return string The fully qualified class name of the recipe for the pizza type.
+     */
     public function recipe(): string
     {
         return match ($this) {
@@ -25,6 +33,11 @@ enum PizzaType: int
         };
     }
 
+    /**
+     * Get the string representation of the pizza type.
+     *
+     * @return string The string representation of the pizza type.
+     */
     public function toString(): string
     {
         return match ($this) {
@@ -35,6 +48,11 @@ enum PizzaType: int
         };
     }
 
+    /**
+     * Get the New York style name for the pizza type.
+     *
+     * @return string The New York style name of the pizza type.
+     */
     public function nyName(): string
     {
         return match ($this) {
@@ -45,6 +63,11 @@ enum PizzaType: int
         };
     }
 
+    /**
+     * Get the Chicago style name for the pizza type.
+     *
+     * @return string The Chicago style name of the pizza type.
+     */
     public function chicagoName(): string
     {
         return match ($this) {
@@ -55,6 +78,11 @@ enum PizzaType: int
         };
     }
 
+    /**
+     * Get the California style name for the pizza type.
+     *
+     * @return string The California style name of the pizza type.
+     */
     public function californiaName(): string
     {
         return match ($this) {

@@ -5,7 +5,13 @@ the [Factory Method Pattern](https://en.wikipedia.org/wiki/Factory_method_patter
 specific pizzas at a pizza store. You will see how modern versions of PHP, supporting Classes, Abstract Classes,
 Interfaces and Enumerators, make it easy to implement the Factory Method Pattern using this language.
 
-### About It
+You can find the PHP 8.1 code
+at [/app/src](https://github.com/harryrampr/OOP_Factory_Method-Pizza_Store_Example/tree/master/app/src), there is
+testing at [/tests](https://github.com/harryrampr/OOP_Factory_Method-Pizza_Store_Example/tree/master/app/tests)
+directory. HTML output with Tailwind CSS can be found
+at [/app/public](https://github.com/harryrampr/OOP_Factory_Method-Pizza_Store_Example/tree/master/app/public) directory.
+
+### About the Pattern
 
 The Factory Method is a creational design pattern in object-oriented programming (OOP) that provides an interface for
 creating objects, but allows subclasses to decide which class to instantiate. It is also known as the Virtual
