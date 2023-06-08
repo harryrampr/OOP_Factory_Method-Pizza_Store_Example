@@ -9,14 +9,27 @@ use App\Recipes\PepperoniPizza;
 use App\Recipes\VeggiePizza;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * Test class for PizzaType.
+ */
 class PizzaTypeTest extends TestCase
 {
+    /**
+     * Test if PizzaType is an enumerator.
+     *
+     * @return void
+     */
     public function testPizzaTypeIsEnumerator(): void
     {
         $enumReflection = new \ReflectionEnum(PizzaType::class);
         $this->assertTrue($enumReflection->isEnum());
     }
 
+    /**
+     * Test the cases of PizzaType.
+     *
+     * @return void
+     */
     public function testPizzaTypeCases(): void
     {
         $expectedCases = [
@@ -31,6 +44,7 @@ class PizzaTypeTest extends TestCase
         $this->assertSame(count($expectedCases), count($cases));
 
         foreach ($cases as $case) {
+            /** @var \ReflectionEnumCase $case */
             $caseName = $case->getName();
             $caseValue = $case->getValue()->value;
             $this->assertContains($caseName, array_keys($expectedCases));
@@ -38,6 +52,11 @@ class PizzaTypeTest extends TestCase
         }
     }
 
+    /**
+     * Test the recipe method of PizzaType.
+     *
+     * @return void
+     */
     public function testPizzaTypeRecipeMethod(): void
     {
         $expectedResults = [
@@ -52,11 +71,17 @@ class PizzaTypeTest extends TestCase
         $this->assertSame(count($expectedResults), count($cases));
 
         foreach ($cases as $case) {
+            /** @var \ReflectionEnumCase $case */
             $caseName = $case->getName();
             $this->assertSame($expectedResults[$caseName], constant("App\PizzaType::$caseName")->recipe());
         }
     }
 
+    /**
+     * Test the toString method of PizzaType.
+     *
+     * @return void
+     */
     public function testPizzaTypeToStringMethod(): void
     {
         $expectedResults = [
@@ -71,11 +96,17 @@ class PizzaTypeTest extends TestCase
         $this->assertSame(count($expectedResults), count($cases));
 
         foreach ($cases as $case) {
+            /** @var \ReflectionEnumCase $case */
             $caseName = $case->getName();
             $this->assertSame($expectedResults[$caseName], constant("App\PizzaType::$caseName")->toString());
         }
     }
 
+    /**
+     * Test the nyName method of PizzaType.
+     *
+     * @return void
+     */
     public function testPizzaTypeNyNameMethod(): void
     {
         $expectedResults = [
@@ -90,11 +121,17 @@ class PizzaTypeTest extends TestCase
         $this->assertSame(count($expectedResults), count($cases));
 
         foreach ($cases as $case) {
+            /** @var \ReflectionEnumCase $case */
             $caseName = $case->getName();
             $this->assertSame($expectedResults[$caseName], constant("App\PizzaType::$caseName")->nyName());
         }
     }
 
+    /**
+     * Test the chicagoName method of PizzaType.
+     *
+     * @return void
+     */
     public function testPizzaTypeChicagoNameMethod(): void
     {
         $expectedResults = [
@@ -109,11 +146,17 @@ class PizzaTypeTest extends TestCase
         $this->assertSame(count($expectedResults), count($cases));
 
         foreach ($cases as $case) {
+            /** @var \ReflectionEnumCase $case */
             $caseName = $case->getName();
             $this->assertSame($expectedResults[$caseName], constant("App\PizzaType::$caseName")->chicagoName());
         }
     }
 
+    /**
+     * Test the californiaName method of PizzaType.
+     *
+     * @return void
+     */
     public function testPizzaTypeCaliforniaNameMethod(): void
     {
         $expectedResults = [
@@ -128,6 +171,7 @@ class PizzaTypeTest extends TestCase
         $this->assertSame(count($expectedResults), count($cases));
 
         foreach ($cases as $case) {
+            /** @var \ReflectionEnumCase $case */
             $caseName = $case->getName();
             $this->assertSame($expectedResults[$caseName], constant("App\PizzaType::$caseName")->californiaName());
         }

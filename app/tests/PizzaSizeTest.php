@@ -5,14 +5,27 @@ namespace Tests;
 use App\PizzaSize;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * Test class for PizzaSize.
+ */
 class PizzaSizeTest extends TestCase
 {
+    /**
+     * Test if PizzaSize is an enumerator.
+     *
+     * @return void
+     */
     public function testPizzaSizeIsEnumerator(): void
     {
         $enumReflection = new \ReflectionEnum(PizzaSize::class);
         $this->assertTrue($enumReflection->isEnum());
     }
 
+    /**
+     * Test the cases of PizzaSize.
+     *
+     * @return void
+     */
     public function testPizzaSizeCases(): void
     {
         $expectedCases = [
@@ -28,6 +41,7 @@ class PizzaSizeTest extends TestCase
         $this->assertSame(count($expectedCases), count($cases));
 
         foreach ($cases as $case) {
+            /** @var \ReflectionEnumCase $case */
             $caseName = $case->getName();
             $caseValue = $case->getValue()->value;
             $this->assertContains($caseName, array_keys($expectedCases));
@@ -35,6 +49,11 @@ class PizzaSizeTest extends TestCase
         }
     }
 
+    /**
+     * Test the toString method of PizzaSize.
+     *
+     * @return void
+     */
     public function testPizzaSizeToStringMethod(): void
     {
         $expectedResults = [
@@ -50,6 +69,7 @@ class PizzaSizeTest extends TestCase
         $this->assertSame(count($expectedResults), count($cases));
 
         foreach ($cases as $case) {
+            /** @var \ReflectionEnumCase $case */
             $caseName = $case->getName();
             $this->assertSame($expectedResults[$caseName], constant("App\PizzaSize::$caseName")->toString());
         }
